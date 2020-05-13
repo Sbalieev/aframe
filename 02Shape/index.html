@@ -9,13 +9,30 @@
   </head>
   <body>
     <a-scene background="color: #333333">
+	<a-sky id="mySky"
+	color="#ECECEC"
+	>
+	</a-sky>
       <a-box id="myBox"
-        width="3"
-        height="2"
+        width="1"
+        height="1"
         depth="1"
-        color="#BBAA33" 
+        color="#e5989b" 
+		position="0 1 -2"
+		rotation="1 40 40"
         shadow>
       </a-box>
+	  <a-plane id="ground"
+		color="#e63946"
+		position="0 0 0"
+		width="10"
+		height="10"
+		rotation="-90 0 0"
+	  >
+	  </a-plane>
+		<a-cylinder id="myCylinder"
+		color="#02c39a">
+		</a-cylinder>
     </a-scene>
   </body>
 </html>
