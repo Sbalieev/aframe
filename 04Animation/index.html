@@ -10,8 +10,8 @@
   <body>
     <a-scene background="color: #333333">
       <a-assets>
-          <img id="wood" src="images/metal.jpg" />
-          <img id="wood2" src="images/water.jpg" />
+          <img id="metal" src="images/metal.jpg" />
+          <img id="water" src="images/water.jpg" />
           <img id="grass" src="images/grass.jpg" />
       </a-assets>
       <a-box id="myBox" 
@@ -20,12 +20,12 @@
         width="3" 
         height="1" 
         depth="1" 
-        material="src: #wood"
+        material="src: #metal"
         shadow 
         animation="property: rotation; 
-                   to: -90 360 180; 
+                   to: 90 -360 180; 
                    dur: 5000; 
-                   easing: easeInElastic; 
+                   easing: linear; 
                    loop: true" 
         animationTwo="property: position;
                    to: 10 25 -13;
@@ -39,7 +39,12 @@
         width="3" 
         height="1" 
         depth="1" 
-        material="src: #wood2"
+        material="src: #water"
+        animation="property: rotation;
+                   to: 0 360 0;
+                   dur: 2000;
+                   easing: linear;
+                   loop true"
         shadow>  
       </a-box>
       <a-plane id="ground"
